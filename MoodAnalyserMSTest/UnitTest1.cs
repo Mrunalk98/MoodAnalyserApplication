@@ -7,11 +7,13 @@ namespace MoodAnalyserMSTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        [DataRow("I am Sad")]
+        [DataRow("I am Happy")]
+        // TC 1.1, 1.2
+        public void TestMethod1(string message)
         {
             // Arrange
             string expected = "HAPPY";
-            string message = "I am Any";
             MoodAnalyser moodAnalyser = new MoodAnalyser(message);
 
             // Act
