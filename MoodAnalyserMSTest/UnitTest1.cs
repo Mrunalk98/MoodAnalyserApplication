@@ -9,8 +9,9 @@ namespace MoodAnalyserMSTest
         [TestMethod]
         public void TestMethod1()
         {
-            string expected = "SAD";
-            string message = "I am Sad";
+            // Arrange
+            string expected = "HAPPY";
+            string message = "I am Any";
             MoodAnalyser moodAnalyser = new MoodAnalyser(message);
 
             // Act
