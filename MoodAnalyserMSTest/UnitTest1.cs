@@ -11,7 +11,7 @@ namespace MoodAnalyserMSTest
         {
             // Arrange
             string expected = "HAPPY";
-            string message = "I am Any";
+            string message = null;
             MoodAnalyser moodAnalyser = new MoodAnalyser(message);
 
             // Act
