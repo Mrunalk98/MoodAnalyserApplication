@@ -7,6 +7,7 @@ namespace MoodAnalyserMSTest
     public class UnitTest1
     {
         [TestMethod]
+        // TC 2.1
         public void TestMethod1()
         {
             // Arrange
