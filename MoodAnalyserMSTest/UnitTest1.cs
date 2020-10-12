@@ -7,7 +7,9 @@ namespace MoodAnalyserMSTest
     [TestClass]
     public class UnitTest1
     {
-        // TC 1.1, 1.2, 2.1
+        /// <summary>
+        /// TC 1.1, 1.2, 2.1 - Given I'm SAD/HAPPY should return SAD/HAPPY 
+        /// </summary>
         [TestMethod]
         public void TestMethod1()
         {
@@ -23,7 +25,9 @@ namespace MoodAnalyserMSTest
             Assert.AreEqual(expected, actual);
         }
 
-        // TC 3.1
+        /// <summary>
+        /// TC 3.1 - Given NULL Mood Should Throw MoodAnalysisCustomException type NULL_MESSAGE
+        /// </summary>
         [TestMethod]
         public void GivenNullShouldThrowException()
         {
@@ -39,7 +43,9 @@ namespace MoodAnalyserMSTest
             }
         }
 
-        // TC 3.2
+        /// <summary>
+        /// TC 3.2 - Given EMPTY Mood Should Throw MoodAnalysisCustomException type EMPTY_MESSAGE
+        /// </summary>
         [TestMethod]
         public void GivenEmptyShouldThrowException()
         {
