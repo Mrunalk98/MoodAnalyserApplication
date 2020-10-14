@@ -71,5 +71,16 @@ namespace MoodAnalyserMSTest
             object actual = MoodAnalyserFactory.CreateMoodAnalyse("MoodAnalyserApplication.MoodAnalyser", "MoodAnalyser");
             expected.Equals(actual);
         }
+
+        /// <summary>
+        /// TC 5.1 - Given class name Should return object using parameterized constructor
+        /// </summary>
+        [TestMethod]
+        public void GivenClassNameShouldReturnObjectUsingParameterizedConstructor()
+        {
+            object expected = new MoodAnalyser("HAPPY");
+            object actual = MoodAnalyserFactory.CreateMoodAnalyseWithParameterizedConstructor("MoodAnalyserApplication.MoodAnalyser", "MoodAnalyser", "HAPPY");
+            expected.Equals(actual);
+        }
     }
 }
