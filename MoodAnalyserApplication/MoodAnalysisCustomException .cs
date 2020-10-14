@@ -8,7 +8,7 @@ namespace MoodAnalyserApplication
     {
         public enum ExceptionType
         {
-            NULL_MESSAGE, EMPTY_MESSAGE
+            NULL_MESSAGE, EMPTY_MESSAGE, NO_SUCH_METHOD, NO_SUCH_CLASS
         }
 
         public readonly ExceptionType type;

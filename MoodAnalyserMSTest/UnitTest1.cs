@@ -11,7 +11,7 @@ namespace MoodAnalyserMSTest
         /// TC 1.1, 1.2, 2.1 - Given I'm SAD/HAPPY should return SAD/HAPPY 
         /// </summary>
         [TestMethod]
-        public void TestMethod1()
+        public void GivenHappyShouldReturnHappy()
         {
             // Arrange
             string expected = "HAPPY";
@@ -61,5 +61,15 @@ namespace MoodAnalyserMSTest
             }
         }
 
+        /// <summary>
+        /// TC 4.1 - Given class name Should return object
+        /// </summary>
+        [TestMethod]
+        public void GivenClassNameShouldReturnObject()
+        {
+            object expected = new MoodAnalyser();
+            object actual = MoodAnalyserFactory.CreateMoodAnalyse("MoodAnalyserApplication.MoodAnalyser", "MoodAnalyser");
+            expected.Equals(actual);
+        }
     }
 }
