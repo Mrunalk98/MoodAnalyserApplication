@@ -82,5 +82,16 @@ namespace MoodAnalyserMSTest
             object actual = MoodAnalyserFactory.CreateMoodAnalyseWithParameterizedConstructor("MoodAnalyserApplication.MoodAnalyser", "MoodAnalyser", "HAPPY");
             expected.Equals(actual);
         }
+
+        /// <summary>
+        /// TC 6.1 - Given Happy Mood should return happy using invoke method - reflection
+        /// </summary>
+        [TestMethod]
+        public void GivenHappyMoodShouldReturnHappyUsingReflection()
+        {
+            object expected = "HAPPY";
+            object actual = MoodAnalyserFactory.InvokeAnalyseMood("HAPPY", "AnalyseMood");
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
