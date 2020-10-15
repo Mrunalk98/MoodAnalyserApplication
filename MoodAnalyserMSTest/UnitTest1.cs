@@ -93,5 +93,16 @@ namespace MoodAnalyserMSTest
             object actual = MoodAnalyserFactory.InvokeAnalyseMood("HAPPY", "AnalyseMood");
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// TC 6.2 - Given Happy Mood and wrong method name should throw NO_SUCH_METHOD exception
+        /// </summary>
+        [TestMethod]
+        public void GivenWrongMethodNameShouldThrowException()
+        {
+            object expected = "HAPPY";
+            object actual = MoodAnalyserFactory.InvokeAnalyseMood("HAPPY", "AnalyseMoodWrong");
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
